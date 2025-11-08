@@ -4,49 +4,63 @@
 body {
   font-family: 'Inter', sans-serif;
   font-weight: 200; /* tu peux changer en 100, 400 ou 700 selon le ton souhaité */
-  background: #f4f4f4;
+  background: #f1b394; /* #dfc893 Lin clair sinon #90bfed pour Gris Azuré ou #f1b394 pour Ivoire gris rosé */
   color: #222;
   padding: 20px;
   margin: 0;
+    text-align: center;
+
 }
 
 h1 {
-  font-weight: 100;
-  text-align: center;
-  font-size: 2.5em;
-  margin-bottom: 30px;
+  font-weight: 200;
+  font-size: 2.6em;
+  letter-spacing: 2px;
+  margin: 40px 0;
+  color: #821d1d;
 }
 
 p {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.95em;
+  margin-top: 6px;
+  color: #821d1d;
 }
 
 .gallery {
-  display: flex;
+ display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto 60px auto;
 }
 
 .gallery a {
+  display: inline-block; /* rend la vignette entièrement “cliquable” */
   text-decoration: none;
   color: inherit;
   text-align: center;
   width: 150px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
 
 .gallery img {
+  display: block; /* empêche le bug de hover inactif au premier survol */
   width: 100%;
-  border-radius: 8px;
-  transition: transform 0.2s;
+  border-radius: 12px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 2px 8px rgba(87, 27, 27, 0.05);
 }
 
-.gallery img:hover {
-  transform: scale(1.05);
+.gallery a:hover img {
+  transform: scale(1.07);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
 a:hover p {
   font-weight: 700;
+  color: #6f1010;
 }
 

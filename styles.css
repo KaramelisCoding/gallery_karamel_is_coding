@@ -64,3 +64,71 @@ a:hover p {
   color: #6f1010;
 }
 
+/* Pied de page : liens sociaux */
+footer.social-links {
+  margin-top: 60px;
+  padding: 40px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-weight: 300;
+}
+
+footer.social-links a {
+  margin: 0 12px;
+  color: #6f1010;             /* cohérent avec ta palette actuelle */
+  text-decoration: none;
+  font-size: 0.95em;
+  transition: color 0.2s ease;
+}
+
+footer.social-links a:hover {
+  color: #000;                /* léger contraste au survol */
+  font-weight: 600;
+   text-align: center;
+}
+
+/* BARRE DU HAUT : titre centré, avatar à gauche */
+.topbar {
+  position: relative;
+  padding: 20px 20px 0;
+  text-align: center; /* pour que le h1 reste centré */
+}
+
+/* On garde ton style de h1 existant */
+
+/* Bloc profil (Behance) en haut à gauche */
+.profile {
+  position: absolute;
+  left: 20px;
+  top: 60px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #821d1d;            /* même teinte que le titre */
+}
+
+/* Vignette ronde : diamètre 60px => rayon 30px */
+.profile img {
+  width: 60px;
+  height: 60px;
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Zoom au survol comme les vignettes de la galerie */
+.profile:hover img {
+  transform: scale(1.2);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Légende sous l’avatar */
+.profile span {
+  font-size: 0.82em;
+  font-weight: 300;
+  color: #821d1d;
+}
+
